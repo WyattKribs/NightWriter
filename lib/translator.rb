@@ -1,12 +1,17 @@
 require './lib/dictionary'
 class Translator
-  include FileReaderAndWriter
-  
-  attr_reader :message, :braille
-  def initialize(message, braille)
 
+  attr_reader :input, :output
+  def initialize(argument1, argument2)
+    @input = argument1
+    @output = argument2
   end
 
+
+  def welcome
+    # require 'pry' ; binding.pry
+    "Created #{@output} containing #{@input.length} characters"
+  end
 
 
 end
