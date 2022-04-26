@@ -24,7 +24,6 @@ class Translator
 
   def translate
     braille_message = []
-    finished_message = ''
     read_input.split('').map do |character|
       @dictionary.braille_hash.map do |letter|
         if letter[0] == character
@@ -32,6 +31,7 @@ class Translator
         end
       end
     end
+    finished_message = ''
     line1 = ''
     line2 = ''
     line3 = ''
@@ -44,6 +44,10 @@ class Translator
     # require 'pry' ; binding.pry
   end
 
+  def each_slice_40
+    
+  end
+
   def read_output
     File.read(@output)
   end
@@ -51,6 +55,9 @@ class Translator
   def write
     File.write(@output, translate)
   end
+
+
+
 
 
 end
