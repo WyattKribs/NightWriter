@@ -13,5 +13,8 @@ class Translator
     "Created #{@output} containing #{@input.length} characters"
   end
 
+  def read_input
+    File.read(@input).chomp
+  end
 
 end

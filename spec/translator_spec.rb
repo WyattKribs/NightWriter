@@ -20,7 +20,7 @@ describe Translator do
   end
 
   it "can read input" do
-    exepct(@translator.read_input).to eq("words")
+    expect(@translator.read_input).to eq("words")
   end
 
 end
