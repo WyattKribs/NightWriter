@@ -1,6 +1,9 @@
+require './lib/dictionary'
 class Translator
-  attr_reader
-  def initialize
+  include FileReaderAndWriter
+  
+  attr_reader :message, :braille
+  def initialize(message, braille)
 
   end
 
