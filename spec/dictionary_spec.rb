@@ -13,8 +13,16 @@ describe Dictionary do
     expect(@dictionary).to be_a(Dictionary)
   end
 
-  it "can convert english to braille" do
-    
+  it "reads each line seperately" do
+    expect(@dictionary.line1["a"]).to  eq("0.")
+    expect(@dictionary.line2["a"]).to  eq("..")
+    expect(@dictionary.line3["a"]).to  eq("..")
+  end
+
+  
+
+
+
 
 
 end
