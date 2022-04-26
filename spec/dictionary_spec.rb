@@ -3,8 +3,8 @@ require './lib/dictionary'
 
 describe Dictionary do
   before(:each) do
-    ARGV[0] = './spec/reader_test/reader_input.txt'
-    ARGV[1] = './spec/reader_test/reader_output.txt'
+    # ARGV[0] = './spec/reader_test/reader_input.txt'
+    # ARGV[1] = './spec/reader_test/reader_output.txt'
     @dictionary = Dictionary.new
   end
 
@@ -19,7 +19,7 @@ describe Dictionary do
     expect(@dictionary.line3["a"]).to  eq("..")
   end
 
-  
+
 
 
 
