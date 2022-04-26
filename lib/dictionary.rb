@@ -40,7 +40,16 @@ class Dictionary
     end
   end
 
+  def line2
+    @braille_hash.transform_values do |value|
+      value[1]
+    end
+  end
 
-
+  def line3
+    @braille_hash.transform_values do |value|
+      value[2]
+    end
+  end
 
 end
