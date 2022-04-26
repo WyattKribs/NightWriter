@@ -5,6 +5,7 @@ class Translator
   def initialize(argument1, argument2)
     @input = argument1
     @output = argument2
+    @dictionary = Dictionary.new
   end
 
 
@@ -21,4 +22,16 @@ class Translator
     read_input.length
   end
 
+  def translate
+    braille_message = []
+    read_input.split('').map do |character|
+      @dictionary.braille_hash.map do |letter|
+        # require 'pry' ; binding.pry
+        if letter[0] == character
+          braille_message << letter[1]
+        end
+      end
+    end
+    braille_message.flatten
+  end
 end

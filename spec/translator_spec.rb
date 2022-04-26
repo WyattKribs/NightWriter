@@ -16,14 +16,29 @@ describe Translator do
   end
 
   it "has a working welcome message" do
-    expect(@translator.welcome).to eq('Created braille.txt containing 1 characters')
+    expect(@translator.welcome).to eq('Created braille.txt containing 11 characters')
   end
 
   it "can read input" do
-    expect(@translator.read_input).to eq("a")
+    expect(@translator.read_input).to eq("hello world")
   end
 
   it "can count" do
-    expect(@translator.count).to eq(1)
+    expect(@translator.count).to eq(11)
+  end
+
+  it "can translate" do
+    expect(@translator.translate).to eq(
+      ["0.", "00", "..",
+      "0.", ".0", "..",
+      "0.", "0.", "0.",
+      "0.", "0.", "0.",
+      "0.", ".0", "0.",
+      "..", "..", "..",
+      ".0", "00", ".0",
+      "0.", ".0", "0.",
+      "0.", "00", "0.",
+      "0.", "0.", "0.",
+      "00", ".0", ".."])
   end
 end
