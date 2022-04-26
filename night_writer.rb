@@ -1,10 +1,7 @@
 require './lib/translator'
 require './lib/dictionary'
+@translator = Translator.new(ARGV[0], ARGV[1])
 
-# message = File.open(ARGV[0], "r")
-# read_message = message.read.chomp
-# braille = File.open(ARGV[1], "w")
-translator = Translator.new(ARGV[0], ARGV[1])
-
-puts translator.welcome
-translator.write_braille(translator.translate)
+puts @translator.welcome
+@translator.translate
+@translator.write
