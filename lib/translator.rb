@@ -10,11 +10,15 @@ class Translator
 
   def welcome
     # require 'pry' ; binding.pry
-    "Created #{@output} containing #{@input.length} characters"
+    "Created #{@output} containing #{count} characters"
   end
 
   def read_input
     File.read(@input).chomp
+  end
+
+  def count
+    read_input.length
   end
 
 end
